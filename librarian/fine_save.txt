@@ -1,0 +1,12 @@
+<?php 
+include('dbcon.php');
+
+if (isset($_POST['submit']))
+{
+	$numToDel = $_POST['fineamount'];
+    mysql_query("update borrow LEFT JOIN borrowdetails on borrow.borrow_id = borrowdetails.borrow_id set fine_amount ='$fineamount' where borrow.borrow_id='$id' and borrowdetails.book_id = '$book_id'")or die(mysql_error());
+    // echo "this is my test to see if value is sent? " . $numToDel;
+}
+ header('location:view_borrow.php');
+
+?>	
