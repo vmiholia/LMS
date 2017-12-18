@@ -1,5 +1,5 @@
 <?php
-@mysql_select_db('eb_lms',mysql_connect('localhost','root',''))or die(mysql_error());
+@mysql_select_db('eb_lms',mysql_connect('localhost','root','root'))or die(mysql_error());
 ?>
 <?php
 /*$con=mysqli_connect("localhost","root","123","eb_lms");
